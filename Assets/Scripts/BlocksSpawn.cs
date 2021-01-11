@@ -19,8 +19,8 @@ public class BlocksSpawn : MonoBehaviour
     }
     IEnumerator SpawnCD()
     {
-        yield return new WaitForSeconds(Random.Range(1f,2)); 
-        Instantiate(Robj, new Vector3(-2.2f,Random.Range(-1.92f,-0.23f),0.9f), Quaternion.identity); 
+        yield return new WaitForSeconds(Random.Range(1.5f,3f)); 
+        Instantiate(Robj, new Vector3(-2.2f,Random.Range(-1.92f,-0.62f),0.9f), Quaternion.identity); 
         Repet();
     }
 }

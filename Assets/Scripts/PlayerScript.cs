@@ -16,7 +16,7 @@ public class PlayerScript : MonoBehaviour
     GameObject Dead;
     [SerializeField]
     Image GameOver;
-    public bool PSDead;
+    bool PSDead;
 
     int highScore;
     [SerializeField]
@@ -75,9 +75,9 @@ public class PlayerScript : MonoBehaviour
             check = false;
 
             goal1.SetActive(false);
-            goal1.transform.position = new Vector3(goal1.transform.position.x, 0.52f, 0.09f);
+            goal1.transform.position = new Vector3(goal1.transform.position.x, 0.61f, 0.09f);
             goal2.SetActive(true);
-            goal2.transform.position = new Vector3(Random.Range(-0.48f, 2.68f),-3.1f, 0.09f);
+            goal2.transform.position = new Vector3(Random.Range(-0.48f, 2.68f),-3.2f, 0.09f);
             score += 1;
         }
         if (collision.tag == "Goal2")
@@ -85,9 +85,9 @@ public class PlayerScript : MonoBehaviour
             check = true;
  
             goal2.SetActive(false);
-            goal2.transform.position = new Vector3(goal2.transform.position.x, -3.1f, 0.09f);
+            goal2.transform.position = new Vector3(goal2.transform.position.x, -3.2f, 0.09f);
             goal1.SetActive(true);
-            goal1.transform.position = new Vector3(Random.Range(-0.48f, 2.68f), 0.52f, 0.09f);
+            goal1.transform.position = new Vector3(Random.Range(-0.48f, 2.68f), 0.61f, 0.09f);
             score += 1;
 
         }

@@ -1201,7 +1201,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5.24
+      scalar: 8
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5250,7 +5250,7 @@ RectTransform:
   - {fileID: 993789457}
   - {fileID: 1071145149}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5434,133 +5434,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &756216953
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 756216956}
-  - component: {fileID: 756216955}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &756216955
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756216953}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &756216956
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756216953}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &872348051
 GameObject:
   m_ObjectHideFlags: 0
@@ -5672,7 +5545,7 @@ GameObject:
   - component: {fileID: 993789458}
   - component: {fileID: 993789460}
   m_Layer: 5
-  m_Name: TapToPlatText
+  m_Name: TapToMoveText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5729,7 +5602,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap to play
+  m_Text: Tap to move
 --- !u!222 &993789459
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6262,7 +6135,7 @@ PrefabInstance:
     - target: {fileID: 7267539973003178825, guid: a5204777aa9911f4991e101e9a69b51f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.457
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: 7267539973003178825, guid: a5204777aa9911f4991e101e9a69b51f,
         type: 3}
@@ -6358,8 +6231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -34}
-  m_SizeDelta: {x: 316.3902, y: 344.6281}
+  m_AnchoredPosition: {x: 0, y: -11}
+  m_SizeDelta: {x: 316.3902, y: 268.33246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1515770260
 MonoBehaviour:
@@ -6413,7 +6286,7 @@ PrefabInstance:
     - target: {fileID: 7267539973003178825, guid: a5204777aa9911f4991e101e9a69b51f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7267539973003178825, guid: a5204777aa9911f4991e101e9a69b51f,
         type: 3}
@@ -6578,7 +6451,7 @@ Transform:
   m_LocalScale: {x: 0.70499116, y: 0.4378741, z: 0.70499116}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1958631576
 BoxCollider2D:
@@ -6705,12 +6578,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983885369}
   m_LocalRotation: {x: -0.009838035, y: -0, z: -0, w: 0.99995166}
-  m_LocalPosition: {x: 1.073, y: -3.09, z: 0}
-  m_LocalScale: {x: 0.12705888, y: 0.12705888, z: 0.12705888}
+  m_LocalPosition: {x: 1.073, y: -3.2, z: 0}
+  m_LocalScale: {x: 0.0741894, y: 0.0741894, z: 0.0741894}
   m_Children:
   - {fileID: 263692648}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -1.1270001, y: 0, z: 0}
 --- !u!114 &1983885372
 MonoBehaviour:
@@ -6730,7 +6603,6 @@ MonoBehaviour:
   scoreText: {fileID: 872348053}
   Dead: {fileID: 6315413340768282942, guid: bb7f13ec7c7f46b4dbb5c682b578c2b9, type: 3}
   GameOver: {fileID: 1071145150}
-  PSDead: 0
   scoreLevelText: {fileID: 1189444148}
   highScoreText: {fileID: 114347704}
   resultPanel: {fileID: 1515770258}

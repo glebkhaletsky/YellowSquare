@@ -8,4 +8,10 @@ public class ScenesManager : MonoBehaviour
 
         SceneManager.LoadScene(0);
     }
+
+    public void Play(int _sceneNumber)
+    {
+
+        SceneManager.LoadScene(0);
+    }
 }
