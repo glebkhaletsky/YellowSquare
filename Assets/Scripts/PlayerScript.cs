@@ -7,7 +7,6 @@ public class PlayerScript : MonoBehaviour
     GameObject goal1;
     [SerializeField]
     GameObject goal2;
-    [SerializeField]
     bool check;
     [SerializeField]
     Text scoreText;
@@ -16,8 +15,6 @@ public class PlayerScript : MonoBehaviour
     GameObject Dead;
     [SerializeField]
     Image GameOver;
-    bool PSDead;
-
     int highScore;
     [SerializeField]
     Text scoreLevelText;
@@ -26,11 +23,20 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     GameObject resultPanel;
 
+    [SerializeField]
+    Text massageText;
+
+    private void Awake()
+    {
+        Time.timeScale = 0f;
+    }
+
     private void Start()
     {
+
         check = true;
         goal1.SetActive(true);
-        goal1.transform.position = new Vector3(Random.Range(-0.48f, 2.68f), 0.457f, 0.09f);
+        goal1.transform.position = new Vector3(Random.Range(-0.48f, 2.68f), 0.66f, 0.09f);
         score = 0;
         goal2.SetActive(false);
         GameOver.enabled = false;
@@ -43,6 +49,14 @@ public class PlayerScript : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (Time.timeScale == 0f)
+        {
+            massageText.text = "Tap to start";
+        }
+        else
+        {
+            massageText.text = "Tap to move";
+        }
         if (check)
         {
             transform.position = Vector3.MoveTowards(transform.position, goal1.transform.position, 4.5f * Time.deltaTime);
@@ -75,9 +89,9 @@ public class PlayerScript : MonoBehaviour
             check = false;
 
             goal1.SetActive(false);
-            goal1.transform.position = new Vector3(goal1.transform.position.x, 0.61f, 0.09f);
+            goal1.transform.position = new Vector3(goal1.transform.position.x, 0.666f, 0.09f);
             goal2.SetActive(true);
-            goal2.transform.position = new Vector3(Random.Range(-0.48f, 2.68f),-3.2f, 0.09f);
+            goal2.transform.position = new Vector3(Random.Range(-0.48f, 2.68f),-3.33f, 0.09f);
             score += 1;
         }
         if (collision.tag == "Goal2")
@@ -85,9 +99,9 @@ public class PlayerScript : MonoBehaviour
             check = true;
  
             goal2.SetActive(false);
-            goal2.transform.position = new Vector3(goal2.transform.position.x, -3.2f, 0.09f);
+            goal2.transform.position = new Vector3(goal2.transform.position.x, -3.33f, 0.09f);
             goal1.SetActive(true);
-            goal1.transform.position = new Vector3(Random.Range(-0.48f, 2.68f), 0.61f, 0.09f);
+            goal1.transform.position = new Vector3(Random.Range(-0.48f, 2.68f), 0.666f, 0.09f);
             score += 1;
 
         }
@@ -96,7 +110,6 @@ public class PlayerScript : MonoBehaviour
 
             this.gameObject.SetActive(false);
             Instantiate(Dead, transform.position, Quaternion.identity);
-            PSDead = true;
             Invoke("PDead", 1f);
                         
         }
@@ -118,5 +131,10 @@ public class PlayerScript : MonoBehaviour
     void Result()
     {
         resultPanel.SetActive(true);
+    }
+
+    public void TapToStart()
+    {
+        Time.timeScale = 1f;
     }
 }
